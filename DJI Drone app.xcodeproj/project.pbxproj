@@ -1,0 +1,370 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5225DD6626529C3C00689760 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5225DD6526529C3C00689760 /* AppDelegate.swift */; };
+		5225DD6826529C3C00689760 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5225DD6726529C3C00689760 /* SceneDelegate.swift */; };
+		5225DD6A26529C3C00689760 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5225DD6926529C3C00689760 /* ViewController.swift */; };
+		5225DD6F26529C4100689760 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5225DD6E26529C4100689760 /* Assets.xcassets */; };
+		5225DD7226529C4100689760 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5225DD7026529C4100689760 /* LaunchScreen.storyboard */; };
+		522C543E265419BB0057146B /* Controllable Drone Animation Test.dae in Resources */ = {isa = PBXBuildFile; fileRef = 522C543D265419BB0057146B /* Controllable Drone Animation Test.dae */; };
+		522C544826541B770057146B /* Flying drone_col.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 522C544126541B770057146B /* Flying drone_col.jpg */; };
+		522C544926541B770057146B /* Ground_Ao.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 522C544226541B770057146B /* Ground_Ao.jpg */; };
+		522C544A26541B770057146B /* Ground_Col.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 522C544326541B770057146B /* Ground_Col.jpg */; };
+		522C544B26541B770057146B /* Flying drone_Nor_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 522C544426541B770057146B /* Flying drone_Nor_2.jpg */; };
+		522C544C26541B770057146B /* Ground_Detail.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 522C544526541B770057146B /* Ground_Detail.jpg */; };
+		522C544D26541B770057146B /* Flying drone_Ao_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 522C544626541B770057146B /* Flying drone_Ao_2.jpg */; };
+		522C544E26541B770057146B /* Ground_Nor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 522C544726541B770057146B /* Ground_Nor.jpg */; };
+		528483E82652BA9200271676 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528483E72652BA9200271676 /* Extensions.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5225DD6226529C3C00689760 /* DJI Drone app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DJI Drone app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5225DD6526529C3C00689760 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5225DD6726529C3C00689760 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		5225DD6926529C3C00689760 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5225DD6E26529C4100689760 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5225DD7126529C4100689760 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5225DD7326529C4100689760 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		522C543D265419BB0057146B /* Controllable Drone Animation Test.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; name = "Controllable Drone Animation Test.dae"; path = "../../../Downloads/Drone-Design/Controllable Drone Animation Test.dae"; sourceTree = "<group>"; };
+		522C544126541B770057146B /* Flying drone_col.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Flying drone_col.jpg"; path = "../../../Downloads/Drone-Design/textures/Flying drone_col.jpg"; sourceTree = "<group>"; };
+		522C544226541B770057146B /* Ground_Ao.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Ground_Ao.jpg; path = "../../../Downloads/Drone-Design/textures/Ground_Ao.jpg"; sourceTree = "<group>"; };
+		522C544326541B770057146B /* Ground_Col.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Ground_Col.jpg; path = "../../../Downloads/Drone-Design/textures/Ground_Col.jpg"; sourceTree = "<group>"; };
+		522C544426541B770057146B /* Flying drone_Nor_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Flying drone_Nor_2.jpg"; path = "../../../Downloads/Drone-Design/textures/Flying drone_Nor_2.jpg"; sourceTree = "<group>"; };
+		522C544526541B770057146B /* Ground_Detail.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Ground_Detail.jpg; path = "../../../Downloads/Drone-Design/textures/Ground_Detail.jpg"; sourceTree = "<group>"; };
+		522C544626541B770057146B /* Flying drone_Ao_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Flying drone_Ao_2.jpg"; path = "../../../Downloads/Drone-Design/textures/Flying drone_Ao_2.jpg"; sourceTree = "<group>"; };
+		522C544726541B770057146B /* Ground_Nor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Ground_Nor.jpg; path = "../../../Downloads/Drone-Design/textures/Ground_Nor.jpg"; sourceTree = "<group>"; };
+		528483E72652BA9200271676 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5225DD5F26529C3C00689760 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5225DD5926529C3C00689760 = {
+			isa = PBXGroup;
+			children = (
+				5225DD6426529C3C00689760 /* DJI Drone app */,
+				5225DD6326529C3C00689760 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5225DD6326529C3C00689760 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5225DD6226529C3C00689760 /* DJI Drone app.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5225DD6426529C3C00689760 /* DJI Drone app */ = {
+			isa = PBXGroup;
+			children = (
+				5225DD6526529C3C00689760 /* AppDelegate.swift */,
+				5225DD6726529C3C00689760 /* SceneDelegate.swift */,
+				5225DD6926529C3C00689760 /* ViewController.swift */,
+				5225DD6E26529C4100689760 /* Assets.xcassets */,
+				522C543D265419BB0057146B /* Controllable Drone Animation Test.dae */,
+				522C544626541B770057146B /* Flying drone_Ao_2.jpg */,
+				522C544126541B770057146B /* Flying drone_col.jpg */,
+				522C544426541B770057146B /* Flying drone_Nor_2.jpg */,
+				522C544226541B770057146B /* Ground_Ao.jpg */,
+				522C544326541B770057146B /* Ground_Col.jpg */,
+				522C544526541B770057146B /* Ground_Detail.jpg */,
+				522C544726541B770057146B /* Ground_Nor.jpg */,
+				5225DD7026529C4100689760 /* LaunchScreen.storyboard */,
+				528483E72652BA9200271676 /* Extensions.swift */,
+				5225DD7326529C4100689760 /* Info.plist */,
+			);
+			path = "DJI Drone app";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5225DD6126529C3C00689760 /* DJI Drone app */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5225DD7626529C4100689760 /* Build configuration list for PBXNativeTarget "DJI Drone app" */;
+			buildPhases = (
+				5225DD5E26529C3C00689760 /* Sources */,
+				5225DD5F26529C3C00689760 /* Frameworks */,
+				5225DD6026529C3C00689760 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "DJI Drone app";
+			productName = "DJI Drone app";
+			productReference = 5225DD6226529C3C00689760 /* DJI Drone app.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5225DD5A26529C3C00689760 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					5225DD6126529C3C00689760 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+				};
+			};
+			buildConfigurationList = 5225DD5D26529C3C00689760 /* Build configuration list for PBXProject "DJI Drone app" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5225DD5926529C3C00689760;
+			productRefGroup = 5225DD6326529C3C00689760 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5225DD6126529C3C00689760 /* DJI Drone app */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5225DD6026529C3C00689760 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5225DD7226529C4100689760 /* LaunchScreen.storyboard in Resources */,
+				522C544C26541B770057146B /* Ground_Detail.jpg in Resources */,
+				522C544926541B770057146B /* Ground_Ao.jpg in Resources */,
+				522C544826541B770057146B /* Flying drone_col.jpg in Resources */,
+				522C544E26541B770057146B /* Ground_Nor.jpg in Resources */,
+				522C544A26541B770057146B /* Ground_Col.jpg in Resources */,
+				5225DD6F26529C4100689760 /* Assets.xcassets in Resources */,
+				522C544D26541B770057146B /* Flying drone_Ao_2.jpg in Resources */,
+				522C543E265419BB0057146B /* Controllable Drone Animation Test.dae in Resources */,
+				522C544B26541B770057146B /* Flying drone_Nor_2.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5225DD5E26529C3C00689760 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5225DD6A26529C3C00689760 /* ViewController.swift in Sources */,
+				5225DD6626529C3C00689760 /* AppDelegate.swift in Sources */,
+				5225DD6826529C3C00689760 /* SceneDelegate.swift in Sources */,
+				528483E82652BA9200271676 /* Extensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5225DD7026529C4100689760 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5225DD7126529C4100689760 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5225DD7426529C4100689760 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5225DD7526529C4100689760 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5225DD7726529C4100689760 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6NN39GMNRV;
+				INFOPLIST_FILE = "DJI Drone app/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rachit-prajapati.DJI-Drone-app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5225DD7826529C4100689760 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6NN39GMNRV;
+				INFOPLIST_FILE = "DJI Drone app/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rachit-prajapati.DJI-Drone-app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5225DD5D26529C3C00689760 /* Build configuration list for PBXProject "DJI Drone app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5225DD7426529C4100689760 /* Debug */,
+				5225DD7526529C4100689760 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5225DD7626529C4100689760 /* Build configuration list for PBXNativeTarget "DJI Drone app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5225DD7726529C4100689760 /* Debug */,
+				5225DD7826529C4100689760 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5225DD5A26529C3C00689760 /* Project object */;
+}
