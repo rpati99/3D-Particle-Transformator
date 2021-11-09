@@ -9,7 +9,6 @@ import UIKit
 import SceneKit
 import SceneKit.ModelIO
 
-
 class DroneController: UIViewController {
     
     fileprivate var scnView: SCNView!
@@ -148,7 +147,7 @@ class DroneController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        setupDrone()
+        setupScene()
     }
     
     
@@ -162,15 +161,14 @@ class DroneController: UIViewController {
     }
     
     
-    @objc func initialize() {
+    @objc private func initialize() {
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [self] in
             
             VoxelService.shared.explode(sceneView: scnView, scene: scene, baseNode: baseNode) {
                 self.titleLabel.text = "Ready to fly"
             }
-            cameraNode.runAction(SCNAction.move(to: SCNVector3(x: 0, y: 0.610, z: 1.85)
-                                                , duration: 10))
+            cameraNode.runAction(SCNAction.move(to: SCNVector3(x: 0, y: 0.610, z: 1.85), duration: 10))
         }
         
         titleLabel.text = "Initializing"
@@ -179,7 +177,7 @@ class DroneController: UIViewController {
     }
     
     
-    func setupDrone() {
+    func setupScene() {
         scene = SCNScene(named: "Drone_dae.scn")
         scnView = SCNView()
         view.addSubview(scnView)
@@ -187,7 +185,6 @@ class DroneController: UIViewController {
         heightConstraint = scnView.heightAnchor.constraint(equalToConstant: 350)
         scnView.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -(view.frame.height * 0.18)).isActive = true
         heightConstraint.isActive = true
-        
         
         scnView.backgroundColor = .clear
         

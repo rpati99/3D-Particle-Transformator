@@ -8,7 +8,7 @@
 import ModelIO
 import SceneKit
 
-class VoxelService {
+final class VoxelService {
     
     static let shared = VoxelService()
     private var voxelNode: SCNNode?
@@ -29,13 +29,12 @@ class VoxelService {
         let voxelArray = MDLVoxelArray(asset: asset, divisions: 13, patchRadius: 0.0)
         
         if let voxelData = voxelArray.voxelIndices() {
-            
-          
+    
             voxelNode?.removeFromParentNode()
             voxelNode = SCNNode()
             sceneView.scene?.rootNode.addChildNode(voxelNode!)
             
-          
+            
             let particle = SCNBox(width: 0.05, height:0.05, length: 0.05, chamferRadius: 0.0)
             
             
@@ -58,12 +57,12 @@ class VoxelService {
     }
     
     func explode(sceneView: SCNView, scene: SCNScene, baseNode: SCNNode, completion: @escaping () -> Void) {
-         voxelize(scene: scene, sceneView: sceneView, baseNode: baseNode)
+        voxelize(scene: scene, sceneView: sceneView, baseNode: baseNode)
         let particle: SCNGeometry
         particle = SCNBox(width: 0.05, height:0.05, length: 0.05, chamferRadius: 0.0)
         
         
-      
+        
         voxelNode?.enumerateChildNodes{child, stop in
             child.physicsBody = SCNPhysicsBody.dynamic()
             child.physicsBody!.isAffectedByGravity = false
@@ -76,26 +75,28 @@ class VoxelService {
         
         let gravityNode = SCNNode()
         DispatchQueue.main.asyncAfter(deadline: .now() + 4.7) {
-              let radialGravityField = SCNPhysicsField.radialGravity()
+            let radialGravityField = SCNPhysicsField.radialGravity()
             
-              gravityNode.physicsField = radialGravityField
-                gravityNode.position = SCNVector3Make(0, 0.5, 0)
+            gravityNode.physicsField = radialGravityField
+            gravityNode.position = SCNVector3Make(0, 0.5, 0)
             radialGravityField.strength = 1.3
             scene.rootNode.addChildNode(gravityNode)
-
+            
         }
-
-        var i : Int  = 0
-
+        
+        var iterationIndex : Int  = 0
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 5.3) { [self] in
             voxelNode?.enumerateChildNodes({ child, stop in
-
                 
                 child.physicsBody?.isAffectedByGravity = false
-                let action = SCNAction.move(to: SCNVector3(x: dronePositions[i].x, y: dronePositions[i].y, z: dronePositions[i].z), duration: 1.5)
+                let action = SCNAction.move(to: SCNVector3(x: dronePositions[iterationIndex].x, y: dronePositions[iterationIndex].y, z: dronePositions[iterationIndex].z),
+                                                    duration: 1.5)
+                
                 child.runAction(action)
-                i += 1
-
+                
+                iterationIndex += 1
+                
             })
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
@@ -104,13 +105,13 @@ class VoxelService {
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.9) {
                 voxelNode?.enumerateChildNodes({ child, stop in
-                child.physicsBody = SCNPhysicsBody.static()
-            })
+                    child.physicsBody = SCNPhysicsBody.static()
+                })
             }
             
         }
-
-
+        
+        
         DispatchQueue.main.asyncAfter(deadline: .now() +  7.4) { [self] in
             voxelNode?.removeFromParentNode()
             scene.rootNode.addChildNode(baseNode)
@@ -119,28 +120,28 @@ class VoxelService {
             let leftRoter = baseNode.childNode(withName: "Rotor_L_2", recursively: false)!
             let anim1 = SCNAction.rotateBy(x: 0, y: 0, z: -2.1, duration: 0)
             leftRoter.runAction(anim1)
-
-
-
+            
+            
+            
             let rightRoter = baseNode.childNode(withName: "Rotor_R_2", recursively: false)!
             let anim2 = SCNAction.rotateBy(x: 0, y: 0, z: 2.1, duration: 0)
             rightRoter.runAction(anim2)
-
+            
             DispatchQueue.main.asyncAfter(deadline: .now() + 0) {
                 let anim3 = SCNAction.rotateBy(x: 0, y: 0, z: 2.1, duration: 4)
                 leftRoter.runAction(anim3)
                 let anim4 = SCNAction.rotateBy(x: 0, y: 0, z: -2.1, duration: 4)
                 rightRoter.runAction(anim4)
             }
-
+            
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.4) {
                 baseNode.geometry!.firstMaterial?.fillMode = .fill
             }
             
-               completion()
+            completion()
             
         }
-
+        
     }
     
     
