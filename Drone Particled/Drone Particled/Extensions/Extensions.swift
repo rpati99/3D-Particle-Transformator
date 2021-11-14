@@ -4,6 +4,7 @@
 
 import UIKit
 
+//Extension for simplifying constraint call.
 extension UIView {
     func anchor(top: NSLayoutYAxisAnchor? = nil,
                 left: NSLayoutXAxisAnchor? = nil,
@@ -79,30 +80,5 @@ extension UIView {
         anchor(top: view.topAnchor, left: view.leftAnchor,
                bottom: view.bottomAnchor, right: view.rightAnchor)
     }
-    
-    func createContainer(image: UIImage?, textField: UITextField) -> UIView {
-        let view = UIView()
-        
-        let imageView = UIImageView()
-        imageView.image = image
-        view.addSubview(imageView)
-        imageView.centerY(inView: view)
-        imageView.anchor(left: view.leftAnchor, paddingLeft: 8, width: 24, height: 24)
-        
-        view.addSubview(textField)
-        textField.anchor(left: imageView.rightAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingLeft: 8, paddingBottom: 8)
-        textField.centerY(inView: view)
-        
-        let seperatorView = UIView()
-        seperatorView.backgroundColor = .lightGray
-        view.addSubview(seperatorView)
-        seperatorView.anchor(left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingLeft: 8, height: 0.75)
-        return view
-        
-        
-        
-    }
-    
-    
 }
 

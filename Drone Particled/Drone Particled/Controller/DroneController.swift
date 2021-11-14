@@ -148,6 +148,11 @@ class DroneController: UIViewController {
         super.viewDidLoad()
         setupUI()
         setupScene()
+        
+        //Animating battery stats
+        let displayLink = CADisplayLink(target: self, selector: #selector(count))
+        displayLink.preferredFramesPerSecond = 60
+        displayLink.add(to: .current, forMode: .default)
     }
     
     
@@ -165,9 +170,12 @@ class DroneController: UIViewController {
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [self] in
             
-            VoxelService.shared.explode(sceneView: scnView, scene: scene, baseNode: baseNode) {
-                self.titleLabel.text = "Ready to fly"
+            //Tranformation of Drone.
+            VoxelService.shared.initiateTransform(sceneView: scnView, scene: scene, baseNode: baseNode) { [self] in
+                titleLabel.text = "Ready to fly"
             }
+            
+            //Animating camera for zoom out effect.
             cameraNode.runAction(SCNAction.move(to: SCNVector3(x: 0, y: 0.610, z: 1.85), duration: 10))
         }
         
@@ -195,7 +203,6 @@ class DroneController: UIViewController {
         scnView.autoenablesDefaultLighting = false
         scnView.allowsCameraControl = true
         scnView.scene = scene
-        //        baseNode.geometry!.firstMaterial?.fillMode = .lines
         
         cameraNode = scene?.rootNode.childNode(withName: "camera", recursively: false)!
         print("DBG: default \(cameraNode.position.x), \(cameraNode.position.y), \(cameraNode.position.z)")
@@ -215,7 +222,6 @@ class DroneController: UIViewController {
         titleLabel.centerX(inView: view)
         titleLabel.anchor(top: view.safeAreaLayoutGuide.topAnchor, paddingTop: 20)
         
-        
         view.addSubview(menu)
         menu.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, paddingTop: 20, paddingLeft: 16)
         
@@ -229,16 +235,16 @@ class DroneController: UIViewController {
         status.adjustsFontSizeToFitWidth = true
         status.anchor(left: view.leftAnchor, bottom: backgroundView.topAnchor, paddingLeft: 16, paddingBottom: -20, width: (view.frame.width / 2) - 10)
         
-        
         view.addSubview(batteryPercentage)
         batteryPercentage.adjustsFontSizeToFitWidth = true
         batteryPercentage.anchor(left: view.leftAnchor, bottom: status.topAnchor, paddingLeft: 16 , paddingBottom: -5, width: 80)
         
-        
         view.addSubview(droneIcon)
         droneIcon.anchor(left: view.leftAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, paddingLeft: 56, paddingBottom: 30)
+        
         view.addSubview(droneLabel)
         droneLabel.anchor(top: droneIcon.bottomAnchor, left: view.leftAnchor, paddingTop: 2, paddingLeft: 53)
+        
         view.addSubview(folderIcon)
         folderIcon.centerX(inView: view)
         folderIcon.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor, paddingBottom: 30)
@@ -246,12 +252,10 @@ class DroneController: UIViewController {
         view.addSubview(userIcon)
         userIcon.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.rightAnchor, paddingBottom: 30, paddingRight: 53)
         
-        
         view.addSubview(initializeButton)
         initializeButton.centerX(inView: backgroundView)
         initializeButton.anchor(bottom: droneIcon.topAnchor, paddingBottom: 0)
         initializeButton.setDimensions(width: view.frame.width * 0.45, height: view.frame.height * 0.15)
-        
         
         view.addSubview(wifiImage)
         wifiImage.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 35).isActive = true
@@ -269,10 +273,6 @@ class DroneController: UIViewController {
         
         view.addSubview(batteryLabel)
         batteryLabel.anchor(bottom: view.bottomAnchor, right: view.rightAnchor, paddingBottom: view.frame.height * 0.36, paddingRight: 30)
-        
-        let displayLink = CADisplayLink(target: self, selector: #selector(count))
-        displayLink.preferredFramesPerSecond = 60
-        displayLink.add(to: .current, forMode: .default)
     }
     
 }

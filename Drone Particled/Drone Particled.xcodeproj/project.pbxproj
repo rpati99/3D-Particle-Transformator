@@ -14,7 +14,7 @@
 		F5A767C62711D395008605BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5A767C42711D395008605BF /* LaunchScreen.storyboard */; };
 		F5A767CE2711D44D008605BF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A767CD2711D44D008605BF /* Extensions.swift */; };
 		F5A767D02711D485008605BF /* VoxelService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A767CF2711D485008605BF /* VoxelService.swift */; };
-		F5A767D22711D4C7008605BF /* Drone_dae.scn in Resources */ = {isa = PBXBuildFile; fileRef = F5A767D12711D4C7008605BF /* Drone_dae.scn */; };
+		F5BB4C4C2740E852009D420F /* Drone_dae.scn in Resources */ = {isa = PBXBuildFile; fileRef = F5BB4C4B2740E852009D420F /* Drone_dae.scn */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +27,7 @@
 		F5A767C72711D395008605BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5A767CD2711D44D008605BF /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		F5A767CF2711D485008605BF /* VoxelService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoxelService.swift; sourceTree = "<group>"; };
-		F5A767D12711D4C7008605BF /* Drone_dae.scn */ = {isa = PBXFileReference; lastKnownFileType = file; path = Drone_dae.scn; sourceTree = SOURCE_ROOT; };
+		F5BB4C4B2740E852009D420F /* Drone_dae.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = Drone_dae.scn; path = "3D Model/Drone_dae.scn"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,17 +60,49 @@
 		F5A767B82711D391008605BF /* Drone Particled */ = {
 			isa = PBXGroup;
 			children = (
-				F5A767B92711D391008605BF /* AppDelegate.swift */,
-				F5A767BB2711D391008605BF /* SceneDelegate.swift */,
-				F5A767BD2711D391008605BF /* DroneController.swift */,
-				F5A767CF2711D485008605BF /* VoxelService.swift */,
-				F5A767CD2711D44D008605BF /* Extensions.swift */,
+				F5BB4C492740E75C009D420F /* Application */,
+				F5BB4C482740E74C009D420F /* Controller */,
+				F5BB4C462740E741009D420F /* Service */,
+				F5BB4C452740E738009D420F /* Extensions */,
 				F5A767C22711D395008605BF /* Assets.xcassets */,
-				F5A767D12711D4C7008605BF /* Drone_dae.scn */,
+				F5BB4C4B2740E852009D420F /* Drone_dae.scn */,
 				F5A767C42711D395008605BF /* LaunchScreen.storyboard */,
 				F5A767C72711D395008605BF /* Info.plist */,
 			);
 			path = "Drone Particled";
+			sourceTree = "<group>";
+		};
+		F5BB4C452740E738009D420F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F5A767CD2711D44D008605BF /* Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F5BB4C462740E741009D420F /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				F5A767CF2711D485008605BF /* VoxelService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		F5BB4C482740E74C009D420F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F5A767BD2711D391008605BF /* DroneController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F5BB4C492740E75C009D420F /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				F5A767B92711D391008605BF /* AppDelegate.swift */,
+				F5A767BB2711D391008605BF /* SceneDelegate.swift */,
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,7 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5A767C62711D395008605BF /* LaunchScreen.storyboard in Resources */,
-				F5A767D22711D4C7008605BF /* Drone_dae.scn in Resources */,
+				F5BB4C4C2740E852009D420F /* Drone_dae.scn in Resources */,
 				F5A767C32711D395008605BF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
