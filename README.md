@@ -1,6 +1,5 @@
 # Drone-Particle-Transformator.
 
-Overview :- 
 Implemented Drone with SceneKit.
 SCNAction for rotation motion in 3D object.
 Used CoreAnimations and CoreGraphics for animations.
