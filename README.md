@@ -1,4 +1,4 @@
-# Drone-Particle-Transformator.
+# 3D-Particle-Transformator.
 
 Implemented Drone with SceneKit.
 SCNAction for rotation motion in 3D object.
