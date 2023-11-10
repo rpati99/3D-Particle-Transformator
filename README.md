@@ -1,6 +1,6 @@
 # 3D-Particle-Transformator.
 
-A drone transforming iteself. 
+Created a 3D effect which simulates a 3D model (drone in this instance) transforming itself. 
 
 Insights
 • Implemented Drone with SceneKit.
